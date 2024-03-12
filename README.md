@@ -1,1 +1,11 @@
-# t1w3websiteproject
+# Feb 24 T1W3 Big Website
+## Sitemap
+
+- Home
+  - About Me
+  - Projects
+    - Cool Website 01
+    - Cool Database
+    - Cool API Server
+  - Contact Us
+  - Skills/Experience/etc
