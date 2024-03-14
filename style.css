@@ -11,5 +11,63 @@
     --curious-blue-800: #0d5e7f;
     --curious-blue-900: #114e69;
     --curious-blue-950: #0b3146;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+* {
+    margin: 0;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--curious-blue-100);
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: var(--curious-blue-400) ;
+    height: 10dvh;
+    width: 100dvw ;
+    text-align: center;
+    font-size: x-small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-height: 85dvh;
+    width: 100dvw ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > * {
+    margin: 1em;
+}
+main > img {
+    height: 50dvh;
+    width: auto;
+    background-color: var(--curious-blue-950);
+    margin: 2em;
+
+}
+
+main > p {
+    font-size: small;
+}
+
+footer {
+    background-color: var(--curious-blue-400);
+    height: 5dvh;
+    width: 100dvw ;
+    text-align: center;
+}
