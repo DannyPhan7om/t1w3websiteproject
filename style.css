@@ -12,7 +12,7 @@
     --curious-blue-900: #114e69;
     --curious-blue-950: #0b3146;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: futura, sans-serif;
 }
 
 * {
@@ -31,7 +31,7 @@ body {
 header {
     background-color: var(--curious-blue-400) ;
     height: 10dvh;
-    width: 100dvw ;
+    width: 100dvw;
     text-align: center;
     font-size: x-small;
     display: flex;
@@ -40,6 +40,15 @@ header {
     align-items: center;
 }
 
+header > h1 {
+    padding: 1dvh;
+    color: #ffffff;
+    transition: 0.5s linear;
+}
+
+header > h1:hover {
+    transform: scale(1.4)
+}
 main {
     min-height: 85dvh;
     width: 100dvw ;
@@ -53,16 +62,41 @@ main {
 main > * {
     margin: 1em;
 }
+
 main > img {
     height: 50dvh;
     width: auto;
     background-color: var(--curious-blue-950);
     margin: 2em;
-
+    border-radius: 12px;
+    /* border-radius: 50%; */
+    /* transition: 1s;
+    transform: scale(.5);
+ */
 }
+
+/* main > img:hover {
+    transform: scale(1);
+    border-radius: 12px;
+} */
+
 
 main > p {
     font-size: small;
+}
+
+nav > a {
+    text-decoration: none;
+    background-color: var(--curious-blue-600);
+    color: white;
+    margin:  1em 0.25em;
+    padding: 0.25em;
+    border-radius: 0.5em;
+    transition: 1s;
+}
+
+nav > a:hover {
+    background-color: var(--curious-blue-950);
 }
 
 footer {
@@ -70,4 +104,7 @@ footer {
     height: 5dvh;
     width: 100dvw ;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
