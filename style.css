@@ -1,110 +1,254 @@
 /* CSS HEX */
 :root {
-    --curious-blue-50: #f1fafe;
-    --curious-blue-100: #e1f4fd;
-    --curious-blue-200: #bde8fa;
-    --curious-blue-300: #83d8f6;
-    --curious-blue-400: #41c3ef;
-    --curious-blue-500: #19acde;
-    --curious-blue-600: #0d9bd3;
-    --curious-blue-700: #0b6f99;
-    --curious-blue-800: #0d5e7f;
-    --curious-blue-900: #114e69;
-    --curious-blue-950: #0b3146;
+  --curious-blue-50: #f1fafe;
+  --curious-blue-100: #e1f4fd;
+  --curious-blue-200: #bde8fa;
+  --curious-blue-300: #83d8f6;
+  --curious-blue-400: #41c3ef;
+  --curious-blue-500: #19acde;
+  --curious-blue-600: #0d9bd3;
+  --curious-blue-700: #0b6f99;
+  --curious-blue-800: #0d5e7f;
+  --curious-blue-900: #114e69;
+  --curious-blue-950: #0b3146;
 
-    font-family: futura, sans-serif;
+  /* box-sizing: border-box; */
 }
 
+/* Necessary */
 * {
-    margin: 0;
-
+  margin: 0;
+  letter-spacing: 0.1rem;
+  box-sizing: border-box;
+  font-family: futura, sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--curious-blue-100);
-    justify-content: center;
-    align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--curious-blue-100);
+  background: url(img/Blue_sky_\(Rome\)_in_2022.02.jpg) var(--curious-blue-100);
+  background-size: 300%;
+  background-blend-mode: overlay;
+  
+  width: 100dvw;
+  height: 100dvh;
 }
 
+/* ==========
+Header Settings 
+============*/
 header {
-    background-color: var(--curious-blue-400) ;
-    height: 10dvh;
-    width: 100dvw;
-    text-align: center;
-    font-size: x-small;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  box-sizing: border-box;
+  height: 15dvh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+
+  background-color: var(--curious-blue-50);
+
+
+  text-align: center;
+  font-size: medium;
+  padding-top: 1dvh;
+  padding-bottom: 1dvh;
+
+  border-bottom: var(--curious-blue-900) solid 2px;
 }
 
-header > h1 {
-    padding: 1dvh;
-    color: #ffffff;
-    transition: 0.5s linear;
+/* ==========
+Navigation Heading 
+============*/
+header > h2 {
+  color: var(--curious-blue-900);
+  box-sizing: border-box;
+  font-weight: 300;
+  height: 40%;
+  height: 5dvh;
+  margin-bottom: 1dvh;
 }
 
-header > h1:hover {
-    transform: scale(1.4)
-}
-main {
-    min-height: 85dvh;
-    width: 100dvw ;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main > * {
-    margin: 1em;
-}
-
-main > img {
-    height: 50dvh;
-    width: auto;
-    background-color: var(--curious-blue-950);
-    margin: 2em;
-    border-radius: 12px;
-    /* border-radius: 50%; */
-    /* transition: 1s;
-    transform: scale(.5);
- */
-}
-
-/* main > img:hover {
-    transform: scale(1);
-    border-radius: 12px;
-} */
-
-
-main > p {
-    font-size: small;
+/* ==========
+Navigation Buttons 
+============*/
+nav {
+  box-sizing: border-box;
+  width: 100dvw;
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1dvh;
 }
 
 nav > a {
-    text-decoration: none;
-    background-color: var(--curious-blue-600);
-    color: white;
-    margin:  1em 0.25em;
-    padding: 0.25em;
-    border-radius: 0.5em;
-    transition: 1s;
+  text-decoration: none;
+  color: var(--curious-blue-900);
+  background-color: var(--curious-blue-100);
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid var(--curious-blue-900);
+  transition: 0.5s;
+  padding: 1dvh 1dvh;
+  width: 60dvw;
+  margin: 0 3dvh;
 }
 
 nav > a:hover {
-    background-color: var(--curious-blue-950);
+  background-color: var(--curious-blue-900);
+  color: #ffffff;
 }
 
-footer {
-    background-color: var(--curious-blue-400);
-    height: 5dvh;
-    width: 100dvw ;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav > a::before {
+  box-sizing: border-box;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 101%;
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  border-top: 1px solid var(--curious-blue-900);
+  border-bottom: 1px solid var(--curious-blue-900);
+  border-radius: 0;
+  transform: scaleY(1.4);
+  transition: 0.5s;
 }
+
+nav > a:hover::before {
+  transform: scaleY(1.2);
+}
+
+/* ==========
+Main Settings
+============*/
+main {
+  box-sizing: border-box;
+  height: 80dvh;
+  width: 100dvw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========
+Children of Main Settings
+============*/
+main > * {
+  margin: 1em;
+}
+
+/* ==========
+Main Image
+============*/
+main > img {
+    box-sizing: border-box;
+  max-height: 30dvh;
+  max-width: 30dvw;
+  /* background-color: var(--curious-blue-100); */
+  border: solid 3px var(--curious-blue-900);
+  padding: 0.3em;
+  margin: 1dvh auto;
+}
+
+/* ==========
+Main Heading
+============*/
+
+main > h1 {
+  font-weight: 300;
+  color: var(--curious-blue-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background-color: var(--curious-blue-100); */
+  color: var(9);
+  height: 10dvh;
+
+}
+
+main > h1::before {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 20%;
+  border-top: 2px solid var(--curious-blue-900);
+  border-bottom: 2px solid var(--curious-blue-900);
+  padding: 1em 0;
+}
+
+/* ==========
+Main Paragraph
+============*/
+
+main > p {
+  font-size: small;
+  height: 20dvh;
+  max-width: 60dvw;
+  margin: 0 auto;
+}
+
+/* ==========
+Main Contact Link
+============*/
+
+main > a {
+  text-decoration: none;
+  height: 20dvh;
+}
+
+main > a:visited {
+  color: var(--curious-blue-900);
+}
+
+/* ==========
+Footer
+============*/
+
+footer {
+  background-color: var(--curious-blue-50);
+  height: 5dvh;
+  width: 100dvw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid var(--curious-blue-900);
+}
+
+/* 
+@media screen and (max-width: 400px) {
+    h2 {
+        display: none;
+    }
+
+    header > nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 60dvw;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+    header > nav > a {
+        margin: 0 2%;
+    }
+
+    header {
+        border-bottom: 0;
+        background-color: var(--curious-blue-100);
+    }
+} */
